@@ -25,7 +25,7 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="circleLineWidth">
-                                        <integer key="value" value="10"/>
+                                        <integer key="value" value="21"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="circleLineColor">
                                         <color key="value" red="0.1529411765" green="0.68235294120000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -34,20 +34,34 @@
                                         <color key="value" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                        <real key="value" value="1.5"/>
+                                        <real key="value" value="0.5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="autoStartFlg" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="easingTypeStr" value="EaseInEaseOut"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="easingTypeStr" value="Linear"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8lc-kT-2re">
+                                <rect key="frame" x="277" y="374" width="45" height="30"/>
+                                <state key="normal" title="止める">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopAnimation:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jpc-bX-sIr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="cdX-II-3XV" secondAttribute="centerY" id="DcM-kz-gTj"/>
+                            <constraint firstItem="8lc-kT-2re" firstAttribute="top" secondItem="cdX-II-3XV" secondAttribute="bottom" constant="24" id="T8j-q3-XCU"/>
                             <constraint firstAttribute="centerX" secondItem="cdX-II-3XV" secondAttribute="centerX" id="odt-m2-E66"/>
+                            <constraint firstAttribute="centerX" secondItem="8lc-kT-2re" secondAttribute="centerX" id="yci-2m-f3n"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3Gg-H9-nlt"/>
+                    <connections>
+                        <outlet property="waveView" destination="cdX-II-3XV" id="cnh-x0-v9C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

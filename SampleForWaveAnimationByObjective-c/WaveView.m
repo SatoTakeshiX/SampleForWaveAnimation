@@ -108,9 +108,13 @@
     //反転をする
     group.autoreverses = YES;
 
+    
+ 
+    
     //レイヤーにアニメーションを設定
     [self.layer addAnimation:group forKey:@"waveAnimation"];
     
+
 }
 
 
